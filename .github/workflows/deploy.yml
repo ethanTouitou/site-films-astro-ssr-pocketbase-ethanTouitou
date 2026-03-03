@@ -19,7 +19,13 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
+      run: |
+        rm -rf node_modules package-lock.json
+        npm install
       run: npm ci
+      
+    - name: Rebuild native deps
+      run: npm rebuild
       
     - name: Build project
       run: |
