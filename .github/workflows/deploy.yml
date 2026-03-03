@@ -24,9 +24,6 @@ jobs:
         npm install
       run: npm ci
       
-    - name: Rebuild native deps
-      run: npm rebuild
-      
     - name: Build project
       run: |
         npm run build
